@@ -1,0 +1,12 @@
+
+input{
+    border: 1px;
+    display: block;
+    border-radius:1vw;
+    font-size: 3vw;
+    padding:1vw;
+    &:focus {
+      outline: none;
+      border: 0;
+    }
+  }

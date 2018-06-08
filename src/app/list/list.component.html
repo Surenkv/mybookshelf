@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="valuePass" placeholder="Search For Books" ><br>
+<ul>
+    <li *ngFor="let data of datas$;let i =index">
+      <a >{{ data.volumeInfo.title }}</a>
+
+    </li>
+  </ul>
