@@ -1,12 +1,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCE7fUBJgKCoQ84PxTFQY1NdX85dzOtJ-8",
-    authDomain: "booksapp-bac13.firebaseapp.com",
-    databaseURL: "https://booksapp-bac13.firebaseio.com",
-    projectId: "booksapp-bac13",
-    storageBucket: "booksapp-bac13.appspot.com",
-    messagingSenderId: "540946325032"
+    apiKey: "AIzaSyBwjMAidKdAGOaB2NsR2Sdlqs1gx-rAW5Q",
+    authDomain: "projprod-995d4.firebaseapp.com",
+    databaseURL: "https://projprod-995d4.firebaseio.com",
+    projectId: "projprod-995d4",
+    storageBucket: "",
+    messagingSenderId: "464252105181"
   }
 };
 
