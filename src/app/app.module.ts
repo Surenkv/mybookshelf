@@ -17,6 +17,8 @@ import { ProductComponent } from './product/product.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { ListComponent } from './list/list.component';
+import { MylistComponent } from './mylist/mylist.component';
+import { LocalService } from './local.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ListComponent } from './list/list.component';
     GlobalComponent,
     NavbarComponent,
     ProductComponent,
-    ListComponent
+    ListComponent,
+    MylistComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { ListComponent } from './list/list.component';
     CoreModule,
     SharedModule,
   ],
-  providers: [],
+  providers: [LocalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

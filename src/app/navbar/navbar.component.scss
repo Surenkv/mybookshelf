@@ -14,7 +14,9 @@ nav {
                 padding: 20px;
                 display: block;
             }
-
+            &:hover{
+                background-color:darkolivegreen;
+            }
             .activated {
                 background-color: #00a8ff;
             }

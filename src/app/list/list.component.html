@@ -1,7 +1,14 @@
-<input type="text" [(ngModel)]="valuePass" placeholder="Search For Books" ><br>
+<input type="text" [(ngModel)]="valuePass" placeholder="Books / Authors / ISBN" >
+<button type="button" (click)="getter()" > Search</button>
+<br>
+
+<p>Some Popular Searches . . .Just Click to Add to Your Collection</p>
 <ul>
     <li *ngFor="let data of datas$;let i =index">
-      <a >{{ data.volumeInfo.title }}</a>
-
+      <a (click)="addProduct(i)" >{{ data.volumeInfo.title }}</a>
+      <ul>
+          <p><strong>Author : </strong> {{ data.volumeInfo.authors }}</p>
+          <p><strong>Average rating : </strong> {{ !data.volumeInfo.averageRating? "NA" : data.volumeInfo.averageRating}}</p>
+        </ul>
     </li>
   </ul>

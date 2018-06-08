@@ -1,12 +1,35 @@
 
 input{
+  background-color: lightgrey;
+  margin-top:30px;
+  margin-bottom:30px;
+  color:white;
+  width:50%;
     border: 1px;
-    display: block;
     border-radius:1vw;
-    font-size: 3vw;
-    padding:1vw;
+    font-size: 2vw;
+    padding:1.6vw;
     &:focus {
       outline: none;
       border: 0;
     }
   }
+  button{
+    border: 0;
+    margin-left:5vh;
+    overflow: hidden;
+    border-radius:1vw;
+    padding:1vw;
+    color:darkolivegreen;
+    margin-top:4vh;
+    font-size:2vw;
+    cursor: pointer;
+    float:inherit;
+    &:focus {
+        outline: none;
+        border: 0;
+      }
+    &:hover {
+        transform: scale(1.2)
+      }  
+}

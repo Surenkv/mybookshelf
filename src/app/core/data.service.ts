@@ -7,7 +7,15 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
 
   constructor(private http: HttpClient) { }
-  getProducts() {
-    return this.http.get('https://www.googleapis.com/books/v1/volumes?q=harrypotter&fields=items/volumeInfo(title,authors,description,averageRating,imageLinks/thumbnail)')
-  }
+  getProducts(valuePass:string) {
+    if(!valuePass){
+      valuePass="songoficeandfire"
+    };
+    return     this.http.get('https://www.googleapis.com/books/v1/volumes', {
+      params: {
+        q: valuePass,
+        fields: 'items/volumeInfo(title,authors,description,averageRating,imageLinks/thumbnail,industryIdentifiers/identifier)'
+      }
+    })
+}
 }

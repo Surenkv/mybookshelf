@@ -22,20 +22,25 @@ body {
        ul {
            list-style-type: none;
            margin:0;padding:0;
-       
+
            li {
                background: #fff;
                border-radius: 8px;
                padding: 20px;
                margin-bottom: 8px;
-       
+
                a {
-                   font-size: 1.5em;
+                   font-size: 2vw;
                    text-decoration: none;
                    font-weight: bold;
                    color:#00A8FF;
-               }
-       
+                   cursor: pointer;
+
+               }                   
+               &:hover{
+                transform: scale(1.02);
+            }
+
                ul {
                    margin-top: 20px;
                    
@@ -48,7 +53,9 @@ body {
                        }
                    }
                }
+
            }
+           
        }
    }
 }

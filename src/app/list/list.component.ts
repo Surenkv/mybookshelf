@@ -10,14 +10,22 @@ import { DataService } from '../core/data.service';
   providers:[DataService]
 })
 export class ListComponent  {
+  public valuePass:string;
 datas$:any;
   constructor(private dataservice: DataService) {
-    this.dataservice.getProducts().subscribe(products=>{
+    this.dataservice.getProducts(this.valuePass).subscribe(products=>{
       this.datas$=products['items'];
-console.log(this.datas$);
+
     })
 
    }
 
-      
+   getter(){
+     this.dataservice.getProducts(this.valuePass).subscribe(products=>{
+      this.datas$=products['items'];
+    })
+   }
+  
+   
+   
   }

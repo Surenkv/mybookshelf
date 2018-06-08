@@ -9,7 +9,7 @@ const routes: Routes = [
     component:GlobalComponent
   },
   {
-    path:"products",
+    path:"library",
     component:ProductComponent
   }
 
