@@ -1,0 +1,15 @@
+<div>
+  <h1 style="font-family:walt;display:unset;font-size:5vw;">Book Shelf</h1>
+  
+  <span *ngIf="auth.afAuth.authState | async as user; else showLogin">
+      <button (click)="auth.logout()" mat-button>Logout</button>
+  </span>
+    <ng-template #showLogin>
+        <button  (click)="auth.login()" type="button"> Login With <span style="font-family:walt">Google</span></button>
+    </ng-template>
+<hr>
+
+  <input type="text" placeholder="Search For Books" >
+
+  
+</div>

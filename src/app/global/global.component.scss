@@ -1,0 +1,27 @@
+button{
+    border: 0;
+    overflow: hidden;
+    border-radius:1vw;
+    padding:1vw;
+    font-size:1.5vw;
+    cursor: pointer;
+    float:right;
+    &:focus {
+        outline: none;
+        border: 0;
+      }
+    &:hover {
+        transform: scale(1.2)
+      }  
+}
+input{
+  border: 1px;
+  display: block;
+  border-radius:1vw;
+  font-size: 3vw;
+  padding:1vw;
+  &:focus {
+    outline: none;
+    border: 0;
+  }
+}
