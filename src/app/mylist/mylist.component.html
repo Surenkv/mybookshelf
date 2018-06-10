@@ -1,3 +1,19 @@
-<p>
-  mylist works!
-</p>
+<ul >
+  <li *ngFor="let Produ of Product">
+    <a>{{ Produ.title}}</a>
+    <i style="float:right;color:firebrick;" class="material-icons" (click)="deletePost(Produ.identifier)">
+        delete_forever
+        </i>
+    <ul>
+      <div id="container"><img style="block-size: 15vw;padding:3vw;" [src]="Produ.photoUrl">
+        <div id="content">      <p><strong>Author : </strong> {{Produ.author}}</p>
+          <p><strong>Average rating : </strong> {{Produ.rating}} / 5</p>
+          <p style="text-align:justify;"><strong>Description : </strong> {{Produ.description}}</p></div>
+  
+        
+      </div>
+      
+
+    </ul>    
+  </li>
+</ul>

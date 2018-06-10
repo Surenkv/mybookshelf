@@ -17,7 +17,7 @@ body {
    height: 100%;
 
    #content {
-       padding: 30px 50px;
+       padding: 3vw 5vw;
 
        ul {
            list-style-type: none;
@@ -25,9 +25,9 @@ body {
 
            li {
                background: #fff;
-               border-radius: 8px;
-               padding: 20px;
-               margin-bottom: 8px;
+               border-radius: 1vw;
+               padding: 2vw;
+               margin-bottom: 1vw;
 
                a {
                    font-size: 2vw;
@@ -58,4 +58,7 @@ body {
            
        }
    }
+}
+p{
+    font-size: 1vw;
 }

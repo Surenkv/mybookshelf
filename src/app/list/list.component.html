@@ -8,7 +8,8 @@
       <a (click)="addProduct(i)" >{{ data.volumeInfo.title }}</a>
       <ul>
           <p><strong>Author : </strong> {{ data.volumeInfo.authors }}</p>
-          <p><strong>Average rating : </strong> {{ !data.volumeInfo.averageRating? "NA" : data.volumeInfo.averageRating}}</p>
+          <p><strong>Average rating : </strong> {{ !data.volumeInfo.averageRating? "NA" : data.volumeInfo.averageRating}} / 5</p>
+          <p style="text-align:justify;"><strong>Description : </strong> {{ data.volumeInfo.description }}</p>
         </ul>
     </li>
   </ul>

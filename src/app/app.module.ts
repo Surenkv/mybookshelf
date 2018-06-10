@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgModule } from '@angular/core'
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'; 
 //firebase
 import { AngularFireModule } from 'angularfire2'
 import { AngularFirestoreModule } from 'angularfire2/firestore'
-import { AngularFireStorageModule } from 'angularfire2/storage'
 import { AngularFireAuthModule } from 'angularfire2/auth'
 import { environment } from '../environments/environment'
 
@@ -19,6 +19,7 @@ import { SharedModule } from './shared/shared.module';
 import { ListComponent } from './list/list.component';
 import { MylistComponent } from './mylist/mylist.component';
 import { LocalService } from './local.service';
+import { AuthService } from './core/auth.service';
 
 @NgModule({
   declarations: [
@@ -33,15 +34,15 @@ import { LocalService } from './local.service';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule,
     CoreModule,
     SharedModule,
   ],
-  providers: [LocalService],
+  providers: [LocalService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
