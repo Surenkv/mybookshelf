@@ -4,6 +4,11 @@ import { DataService } from '../core/data.service';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { AuthService } from '../core/auth.service';
 
+interface User {
+  displayName:string;
+  userID:string;
+}
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -13,7 +18,9 @@ import { AuthService } from '../core/auth.service';
 export class ListComponent implements OnInit {
   public valuePass:string;
   public userId:string;
-
+  
+  userCol: AngularFirestoreCollection<User>;
+  users: User[];
 datas$:any;
   constructor(private afs: AngularFirestore,private dataservice: DataService,private auth:AuthService) {
     this.dataservice.getProducts(this.valuePass).subscribe(products=>{
@@ -44,7 +51,7 @@ datas$:any;
        newPic="/assets/images/imageno.jpg";
      }
       let newData={"title":savedata.title,"author":savedata.authors[0],"rating":rate,"description":savedata.description,"photoUrl":newPic,"identifier":savedata.industryIdentifiers[0].identifier}
-      this.afs.collection(`users/user/${this.userId}`).doc(newData.identifier).set(newData);
+      this.afs.collection(`bookshelf/${this.userId}/mylib`).doc(newData.identifier).set(newData);
        alert(savedata.title + " has been successfully updated to your collection");
  
      }else{

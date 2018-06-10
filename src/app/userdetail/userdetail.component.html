@@ -1,0 +1,25 @@
+<h1 style="font-family:walt;display:unset;font-size:5vw;">Collection of </h1>
+
+<h3 style="font-family:walt;display:unset;font-size:5vw;color:darkolivegreen;">{{callme}}</h3>
+<button type="button" (click)="goHere()" style="float:right">Back to My Collection</button>
+<br>
+
+<hr>
+
+<ul >
+    <li *ngFor="let Produ of Product">
+      <a>{{ Produ.title}}</a>
+      <ul>
+        <div id="container"><img style="block-size: 15vw;padding:3vw;" [src]="Produ.photoUrl">
+          <div id="content">      <p><strong>Author : </strong> {{Produ.author}}</p>
+            <p><strong>Average rating : </strong> {{Produ.rating}} / 5</p>
+            <p style="text-align:justify;"><strong>Description : </strong> {{Produ.description}}</p></div>
+    
+          
+        </div>
+        
+  
+      </ul>    
+    </li>
+  </ul>
+  

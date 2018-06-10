@@ -30,7 +30,7 @@ this.userId = auth.authState.uid;
 
 
   ngOnInit() {
-    this.postsCol = this.afs.collection(`users/user/${this.userId}`);
+    this.postsCol = this.afs.collection(`bookshelf/${this.userId}/mylib`);
     this.postsCol.valueChanges().subscribe(res => {
       this.Product=res;
     });
@@ -38,7 +38,7 @@ this.userId = auth.authState.uid;
   deletePost(postId) {
     var result = confirm("Are you sure to remove it from your collection?");
 if (result) {
-  this.afs.doc(`users/user/${this.userId}/${postId}`).delete();
+  this.afs.doc(`bookshelf/${this.userId}/mylib/${postId}`).delete();
 }
    
   }

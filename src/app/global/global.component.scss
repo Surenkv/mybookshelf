@@ -1,17 +1,17 @@
-button{
-    border: 0;
-    overflow: hidden;
-    border-radius:1vw;
-    padding:1vw;
-    font-size:1.5vw;
-    cursor: pointer;
-    float:right;
-    &:focus {
-        outline: none;
-        border: 0;
+
+#container {
+  display: grid;
+  grid-template-columns: 70% auto;
+  height: 100%;
+  #content {
+      padding: 2vw 2.5vw;
+
+      ul {
+          list-style-type: none;
+          margin:0;padding:0;          
       }
-    &:hover {
-        transform: scale(1.2);
-        background-color: darkolivegreen;
-      }  
+  }
+}
+p{
+   font-size: 1vw;
 }

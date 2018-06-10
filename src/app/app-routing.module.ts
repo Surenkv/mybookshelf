@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GlobalComponent } from './global/global.component';
 import { ProductComponent } from './product/product.component';
+import { UserdetailComponent } from './userdetail/userdetail.component';
+
 
 const routes: Routes = [
   {
@@ -11,6 +13,10 @@ const routes: Routes = [
   {
     path:"library",
     component:ProductComponent
+  },
+  {
+    path:"userdetail/:id/:callme",
+    component:UserdetailComponent
   }
 
 ];

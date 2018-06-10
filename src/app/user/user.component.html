@@ -1,0 +1,7 @@
+<h6 style="margin-top:0;font-family:walt;font-size:2vw;text-align:center;">Active Readers</h6>
+
+    <div id="useractive" *ngFor="let user of users;let i =index" >
+      <div (click)="onClick(user.logId,user.userName)" >
+        <img src="{{user.imageUrl}}" style="width:10%;height:10%;float:right">
+      <a >{{ user.userName }}</a></div>
+    </div>

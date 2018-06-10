@@ -1,0 +1,25 @@
+#useractive{
+    padding:1vw;
+    background: #fff;
+    border-radius: 1vw;
+    padding: 1vw;
+    margin-bottom: 1vw;
+    &:hover{
+        transform:scale(1.05);
+        cursor: pointer;
+    }
+    a {
+        font-size: 1vw;
+        text-decoration: none;
+        font-weight:normal;
+        color:#00A8FF;
+
+    } 
+}
+
+img{
+    border-radius: 50%;
+    float:right;
+    background-color: darkolivegreen;
+}
+

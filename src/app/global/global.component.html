@@ -8,8 +8,12 @@
         <button  (click)="auth.login()" type="button"> Login With <span style="font-family:walt">Google</span></button>
     </ng-template>
 <hr>
-
-  <app-list></app-list>
-
-  
+<div id="container">
+        <app-list></app-list>
+        
+        <div id="content" style="padding-right:0;">
+                <div style="border-left:1px solid #000;height:100%;padding:2vw;padding-right:0;"><app-user></app-user></div>
+          
+        </div>
+      </div>  
 </div>

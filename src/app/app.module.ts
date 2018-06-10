@@ -20,6 +20,8 @@ import { ListComponent } from './list/list.component';
 import { MylistComponent } from './mylist/mylist.component';
 import { LocalService } from './local.service';
 import { AuthService } from './core/auth.service';
+import { UserComponent } from './user/user.component';
+import { UserdetailComponent } from './userdetail/userdetail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AuthService } from './core/auth.service';
     NavbarComponent,
     ProductComponent,
     ListComponent,
-    MylistComponent
+    MylistComponent,
+    UserComponent,
+    UserdetailComponent
   ],
   imports: [
     BrowserModule,
